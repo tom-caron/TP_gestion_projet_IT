@@ -1,0 +1,27 @@
+body {
+    background-color: #f8f9fa;
+  }
+  
+  h1 {
+    color: #343a40;
+  }
+  
+  .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .text-decoration-line-through {
+    text-decoration: line-through;
+    color: #6c757d;
+  }
+  
+  .form-check-label {
+    cursor: pointer;
+  }
+  
+  .form-check-input {
+    margin-right: 10px;
+  }
+  
