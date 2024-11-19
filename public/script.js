@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </label>
         <p class="task-description">${task.description}</p>
         <p class="task-deadline">Deadline: ${new Date(task.deadline).toLocaleString()}</p>
-        <button class="btn btn-sm btn-danger delete-task">✖</button>
+        <button class="btn btn-sm btn-danger delete-task">🗑️</button>
       `;
 
       // Ajouter l'événement de changement de statut (checkbox)
