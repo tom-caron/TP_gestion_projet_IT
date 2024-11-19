@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const taskList = document.getElementById("task-list");
     const addTaskForm = document.getElementById("add-task-form");
     const taskInput = document.getElementById("task-input");
+    const taskDescription = document.getElementById("task-description");
   
     /**
      * Charger les tâches depuis le Local Storage
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <input class="form-check-input" type="checkbox" ${task.done ? 'checked' : ''}> 
             ${task.text}
           </label>
+          <p class="task-description">${task.description}</p>
           <button class="btn btn-sm btn-danger delete-task">✖</button>
         `;
   
@@ -46,14 +48,17 @@ document.addEventListener("DOMContentLoaded", () => {
       addTaskForm.addEventListener("submit", (e) => {
         e.preventDefault(); // Empêche le rechargement de la page
   
-        const taskText = taskInput.value.trim(); // Récupère la valeur du champ
+        const taskText = taskInput.value.trim(); // Récupère la valeur du champ "Nom de la tâche"
+        const descriptionText = taskDescription.value.trim(); // Récupère la description
+  
         if (taskText === "") return; // Ignore les entrées vides
   
         const tasks = JSON.parse(localStorage.getItem("tasks")) || []; // Récupère les tâches existantes
-        tasks.push({ text: taskText, done: false }); // Ajoute la nouvelle tâche
+        tasks.push({ text: taskText, description: descriptionText, done: false }); // Ajoute la nouvelle tâche avec description
         localStorage.setItem("tasks", JSON.stringify(tasks)); // Sauvegarde dans le Local Storage
   
-        taskInput.value = ""; // Réinitialise le champ
+        taskInput.value = ""; // Réinitialise le champ "Nom de la tâche"
+        taskDescription.value = ""; // Réinitialise le champ "Description"
         window.location.href = "/"; // Redirige vers la liste des tâches
       });
     }
