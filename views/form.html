@@ -12,13 +12,18 @@
     <h1 class="text-center">Add a New Task</h1>
     <form id="add-task-form" class="mt-4">
       <div class="mb-3">
-        <input type="text" id="task-input" class="form-control" placeholder="Enter task" required>
+        <label for="task-input" class="form-label">Task Name</label>
+        <input type="text" id="task-input" class="form-control" placeholder="Enter task name" required>
       </div>
-      <div class="text-center">
-        <button type="submit" class="btn btn-success">Add Task</button>
-        <a href="/" class="btn btn-secondary">Back to List</a>
+      <div class="mb-3">
+        <label for="task-description" class="form-label">Description</label>
+        <textarea id="task-description" class="form-control" rows="3" placeholder="Enter task description"></textarea>
       </div>
+      <button type="submit" class="btn btn-primary">Add Task</button>
     </form>
+    <div class="text-center mt-4">
+      <a href="/" class="btn btn-secondary">Back to To-Do List</a>
+    </div>
   </div>
   <script src="/script.js"></script>
 </body>
