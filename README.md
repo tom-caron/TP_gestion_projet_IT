@@ -6,12 +6,12 @@ Ce projet est une incroyable todo list.
 Elle fonctionne grâce à :
 - Node (avec express).
 - Bootstrap 5.
-- L'amour au sein de non pas une simple équipe, mais une famille.
+- L'amour au sein, de non pas une simple équipe, mais une famille.
 
 Elle permet de :
-- Créer des taches.
-- Suprimer des taches.
-- Barrer des taches.
+- Créer des taches avec des deadline.
+- Supprimer des taches.
+- Valider des taches.
 
 Elle ne permet pas :
 - De remplir des fiches d'imposition.
